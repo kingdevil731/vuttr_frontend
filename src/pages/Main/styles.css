@@ -1,0 +1,35 @@
+
+
+.main-interface {
+    border-radius: 5px;
+    background-color: white;
+    margin: 35px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+     font-family: Roboto, sans-serif;
+}
+
+h1 {
+    margin: 20px;
+    padding: 15px;
+}
+h2,h3 { 
+   padding: 10px;
+   margin: 15px;
+}
+
+button {
+    background-color: tomato;
+    color: white;
+    border-radius: 6px;
+    padding: 8px;
+    margin: 5px 5px;
+    width: 100%;
+    height: 50px;
+}
+
+.selecao {
+    display: grid;
+    margin-bottom: 20px;
+}
