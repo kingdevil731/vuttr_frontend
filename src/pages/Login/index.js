@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 // use history
-import { useHistory, Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 // styles
 import './styles.css';
 
@@ -19,12 +19,14 @@ const Login = () => {
       if(local !== undefined || local.length === 24){
         history.push('/main');
       }
-    }, [local]);
+    }, [history, local]);
 
     async function iniciarSeccao(e){
         e.preventDefault();
         try {
-            const response = await api.get('/auth/login', {id});
+            const response = await api.post("/auth/login", {
+              id : id
+            });
 
             const {token, usuario} = response.body;
             

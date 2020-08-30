@@ -41,11 +41,6 @@ const Register = () => {
             console.log(error);
             alert('Error, verifique os dados e tente novamente!');
         }
-       
-
-    }
-    function voltarParaLogin(){
-        return history.push('/auth/login');
     }
 
     return(
