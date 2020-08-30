@@ -1,0 +1,47 @@
+.main-content {
+    width: 100%;
+    max-width: 1120px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.main-content section.form {
+    width: 100%;
+    max-width: 350px;
+    margin-right: 30px;
+    text-align: center;
+}
+
+.main-content section.logo, section.form h1 {
+    font-weight: bolder;
+    font-size: 39px;
+    color: #e02041;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+.main-content section.logo img { 
+    width: 150px;
+    height: 150px;
+}
+
+.main-content section form {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-content section.form form button {
+    margin: 6px;
+    font-weight: bolder;
+    padding: 6px;
+}
+.main-content section form input {
+    margin: 6px;
+    border: 0;
+    border-radius: 5px;
+    padding: 13px;
+}

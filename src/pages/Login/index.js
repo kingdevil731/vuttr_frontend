@@ -6,7 +6,7 @@ import './styles.css';
 
 import logo from '../../Assets/logo512.png'; // logo
 
-import api from '../../services/api';
+import api from '../../services/api'; // importação do api
 
 
 const Login = () => {
@@ -19,10 +19,15 @@ const Login = () => {
         console.log(id);
     }, [id]);
 
-    async function iniciarSeccao(){
+    async function iniciarSeccao(e){
+        e.preventDefault();
         const response = await api.get('/auth/login').send({
             id
-        })
+        });
+        console.log(response.body);
+    }
+    function irParaCadastar(){
+        return history.push('/auth/register');
     }
 
     return(
@@ -34,8 +39,8 @@ const Login = () => {
            
             <section className="form">
                 <h1>Login</h1>
-            <form action={iniciarSeccao} method="get">
-                <input value={id} onChange={e => setId(e.target.value)} type="text" name="id" id="id" placeholder="Id"/>
+            <form onSubmit={iniciarSeccao}>
+                <input value={id} onChange={e => setId(e.target.value)} type="text" name="id" id="id" placeholder="Introduza o Id"/>
                 <button className="button-log" type="submit">Iniciar</button>
             </form>
             </section>

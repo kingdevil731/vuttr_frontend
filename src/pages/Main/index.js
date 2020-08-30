@@ -13,6 +13,11 @@ const Main = () => {
       return history.push('/auth/login');
     }
 
+    function RegisterPage(e) {
+      e.preventDefault();
+      return history.push('/auth/register');
+    }
+
     return (
       <div className="main-interface">
         <section className="main-interface-text">
@@ -26,7 +31,7 @@ const Main = () => {
         </section>
         <div className="selecao">
           <button className="button-log" onClick={loginPage}>Iniciar seccao</button>
-          <button className="button-log">Cadastrar</button>
+          <button className="button-log" onClick={RegisterPage}>Cadastrar</button>
         </div>
       </div>
     );
