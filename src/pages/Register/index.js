@@ -6,24 +6,43 @@ import './styles.css';
 
 import logo from '../../Assets/logo512.png'; // logo
 
-//import api from '../../services/api';
+import api from '../../services/api'; // api
 
 
 const Register = () => {
     // inicialização do useHistory
     const history = useHistory();
     //state
-    const [usuario, setUsuario] = useState('');
-    const [nome, setNome] = useState('');
+    const [user, setUser] = useState('');
+    const [name, setName] = useState('');
 
-    useEffect(() => {
-        console.log(usuario, nome);
-    }, [usuario, nome]);
+    async function cadastrar(e){
+        e.preventDefault();
+        try {
+            const response = await api.post("/auth", {
+              usuario: user,
+              nome: name,
+            });
 
-    async function cadastrar(){
-       /* const response = await api.get('/auth/login').send({
-            id
-        })*/
+            const {nome, token, usuario, _id} = response.data; // obtencao dos dados da resposta
+
+            //guardar no localStorage do usuario a informacao para posterior uso na app
+            localStorage.setItem('nome', nome);
+            localStorage.setItem('token', token);
+            localStorage.setItem('usuario', usuario);
+            localStorage.setItem('_id', _id);
+
+            //informar o usuario o seu id
+            alert(`Parabens, Seu Id e ${_id}`);
+
+            history.push('/main');
+            
+        } catch (error) {
+            console.log(error);
+            alert('Error, verifique os dados e tente novamente!');
+        }
+       
+
     }
     function voltarParaLogin(){
         return history.push('/auth/login');
@@ -38,9 +57,9 @@ const Register = () => {
            
             <section className="form">
                 <h1>Cadastrar</h1>
-            <form onSubmit={voltarParaLogin} method="get">
-                <input value={usuario} onChange={e => setUsuario(e.target.value)} type="text" name="usuario" id="usuario" placeholder="Introduza o Usuario"/>
-                <input value={nome} onChange={e => setNome(e.target.value)} type="text" name="nome" id="nome" placeholder="Introduza o Nome"/>
+            <form onSubmit={cadastrar}>
+                <input value={user} onChange={e => setUser(e.target.value)} type="text" name="usuario" id="usuario" placeholder="Introduza o Usuario"/>
+                <input value={name} onChange={e => setName(e.target.value)} type="text" name="nome" id="nome" placeholder="Introduza o Nome"/>
                 <button className="button-log" type="submit">Cadastrar</button>
             </form>
             </section>
