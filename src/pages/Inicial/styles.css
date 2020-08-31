@@ -1,0 +1,101 @@
+div.main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+div.main div.title {
+    margin: 3px;
+    margin-bottom: 20px;
+}
+div.main div.title h1 {
+    margin-bottom: 8px;
+}
+
+div.tools {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+div.tools div.first input {
+    padding: 4px;
+    margin: 3px;
+    border-radius: 4px;
+    border: 0;
+}
+
+div.tools div.first label {
+    justify-content: center;
+}
+
+button.b {
+    padding: 4px;
+    margin: 3px;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    border: 0;
+    background-color: #e02041;
+    border-radius: 4px;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    align-self: center;
+    transition: opacity 0.2s;
+}
+
+button.b:hover {
+    opacity: 0.8;
+}
+
+
+ul {
+    margin-top: 35px;
+}
+
+ul li {
+    margin-bottom: 15px;
+    border-radius: 5px;
+    list-style: none;
+    background-color: white;
+    padding: 15px;
+}
+button.bRemove {
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    background: none;
+    border: 0;
+    transition: color 0.5s;
+}
+
+button.bRemove:hover {
+    color: tomato;
+    font-size: medium;
+}
+
+li div.liTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+li div.liTitle strong {
+    text-decoration: underline;
+    color: royalblue;
+}
+li div.liTitle strong:hover {
+    color: tomato;
+}
+
+li p {
+    margin-top: 8px;
+}
+li p:last-child {
+    font-weight: bold;
+}
