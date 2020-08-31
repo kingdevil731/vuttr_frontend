@@ -4,20 +4,25 @@ import './styles.css'; // styles
 
 import api from '../../services/api'; // api
 
-import {FiX, FiPlus} from 'react-icons/fi';
+import {FiX, FiPlus, FiSearch} from 'react-icons/fi'; // icon x e +
 
 const Inicial = () => {
-    const [query, setQuery] = useState('');
-    const [dados, setDados] = useState([]);
+    const [query, setQuery] = useState(''); // query / pesquisa
+    const [dados, setDados] = useState([]); // dados da lista
 
     // obter dados no inicio
     useEffect(() => {
-        api.get('/tools').then(response => {
-            setDados(response.data);
-        });
+        try {
+             api.get("/tools").then((response) => {
+               setDados(response.data);
+             });
+        } catch (error) {
+            alert('Aconteceu um erro estranho, Por favor Recarregue a pagina :X');
+        }
     }, []);
-
-    function handleRemoveItem(item){
+    
+    // funcao para remover item quando clicar no butao remover
+    function removerItem(item){
         try {
             api.delete(`/tools/${item}`);
 
@@ -25,7 +30,6 @@ const Inicial = () => {
         } catch (error) {
             alert('Error, tente novamente! :)');
         }
-        
     }
 
     return (
@@ -37,12 +41,16 @@ const Inicial = () => {
 
         <div className="tools">
           <div className="first">
-            <input
-              type="search"
-              name="search"
-              id="search"
-              placeholder="Search"
-            />
+            <>
+              <FiSearch />
+              <input
+                type="search"
+                name="search"
+                id="search"
+                placeholder="Search"
+              />
+            </>
+
             <label>
               <input
                 type="checkbox"
@@ -56,7 +64,7 @@ const Inicial = () => {
           </div>
           <div className="second">
             <button className="b">
-              <FiPlus/>
+              <FiPlus />
               Add
             </button>
           </div>
@@ -65,8 +73,15 @@ const Inicial = () => {
           {dados.map((i) => (
             <li key={i._id}>
               <div className="liTitle">
-                <strong>{i.title}</strong>
-                <button className="bRemove" onClick={() => {handleRemoveItem(i._id)}}>
+                <a href={i.link}>
+                  <strong>{i.title}</strong>
+                </a>
+                <button
+                  className="bRemove"
+                  onClick={() => {
+                    removerItem(i._id);
+                  }}
+                >
                   <FiX size={15} color="#e02041" />
                   remove
                 </button>
