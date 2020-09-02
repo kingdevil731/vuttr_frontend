@@ -6,12 +6,15 @@ import api from '../../services/api'; // api
 
 import {FiX, FiPlus, FiSearch} from 'react-icons/fi'; // icon x e +
 
-import Modal from '@bit/react-bootstrap.react-bootstrap.modal' // modal biblioteca
-
 const Inicial = () => {
-    const [query, setQuery] = useState(''); // query / pesquisa
-    const [dados, setDados] = useState([]); // dados da lista
-    const [estado, setEstado] = useState(false); // estado da form
+    // query / pesquisa
+    const [query, setQuery] = useState('');
+    // dados da lista
+    const [dados, setDados] = useState([]);
+    // estado da form para nova ferramenta
+    const [show, setShow] = useState(false); 
+    // estado da form para remoção de dados
+    const [remover, setRemover] = useState(false);
 
     // obter dados no inicio
     useEffect(() => {
@@ -33,15 +36,22 @@ const Inicial = () => {
         } catch (error) {
             alert('Error, tente novamente! :)');
         }
-    }
+    };
 
-    function abrirForm(form){
-
-    }
-
-    function fecharForm(form){
-
-    }
+    // apresentar o modal
+    function showModal(tipo) {
+      if(tipo === 1){
+        setShow(true);
+      }
+      setRemover(true);
+    };
+    // guardar/esconder o modal
+    function hideModal (tipo) {
+      if(tipo === 1){
+        setShow(false);
+      }
+      setRemover(false);
+    };
 
     return (
       <div className="main">
@@ -74,7 +84,7 @@ const Inicial = () => {
             </label>
           </div>
           <div className="second">
-            <button className="b" onClick={abrirForm}>
+            <button className="b" onClick={e => showModal(1)}>
               <FiPlus />
               Add
             </button>
@@ -102,24 +112,45 @@ const Inicial = () => {
             </li>
           ))}
         </ul>
+        
+        <Modal show={show} handleClose={hideModal}>
+          <div className="title-modal">
+            <FiPlus color="#e02041"/>
+            <h3>Add new tool</h3>
+          </div>
 
-        <Modal show={this.state.show} onHide={this.handleClose}>
-					<Modal.Header closeButton>
-						<Modal.Title>Modal heading</Modal.Title>
-					</Modal.Header>
-					<Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-					<Modal.Footer>
-						<button onClick={fecharForm}>
-							Close
-            </button>
-						<button onClick={fecharForm}>
-							Save Changes
-            </button>
-					</Modal.Footer>
-				</Modal>
+          <form class="form-modal" onSubmit={e => hideModal(1)}>
+            <label htmlFor="title">Tool Name</label>
+            <input type="text" name="title" id="title" placeholder="Titulo da Ferramenta"/>
+
+            <label htmlFor="title">Tool Link</label>
+            <input type="text" name="link" id="link" placeholder="Endereço da Ferramenta"/>
+
+            <label htmlFor="title">Tool description</label>
+            <input type="text" name="description" id="description" placeholder="Descrição da Ferramenta"/>
+
+            <label htmlFor="title">Tags</label>
+            <input type="text" name="tags" id="tags" placeholder="Tags para a Ferramenta"/>
+          </form>
+
+          <div className="butoes">
+            <button type="submit" onClick={e => hideModal(1)}>Add Tool</button>
+          </div>
+        </Modal>
       </div>
     );
 };
 
+const Modal = ({ show, children }) => {
+  const showHideClassName = show ? "modal display-block" : "modal display-none";
+
+  return (
+    <div className={showHideClassName}>
+      <section className="modal-main">
+        {children}
+      </section>
+    </div>
+  );
+};
 
 export default Inicial;

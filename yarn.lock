@@ -1077,133 +1077,76 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@bit/react-bootstrap.react-bootstrap.bootstrap-modal-manager@1.0.0":
-  version "1.0.0"
-  resolved "https://node.bit.dev/react-bootstrap.react-bootstrap.bootstrap-modal-manager/-/react-bootstrap.react-bootstrap.bootstrap-modal-manager-1.0.0.tgz#b415f61ca471cb4ae5b655a62321ed5f5ead18ce"
-  integrity sha1-tBX2HKRxy0rltlWmIyHtX16tGM4=
+"@bit/reactstrap.reactstrap.fade@8.4.1":
+  version "8.4.1"
+  resolved "https://node.bit.dev/reactstrap.reactstrap.fade/-/reactstrap.reactstrap.fade-8.4.1.tgz#e5b8bfba89efe57c1ca71649124c47687c364455"
+  integrity sha1-5bi/uonv5XwcpxZJEkxHaHw2RFU=
   dependencies:
-    dom-helpers "^3.4.0"
-    react-overlays "^1.0.0"
+    "@bit/reactstrap.reactstrap.internal.utils" "8.4.1"
+    classnames "^2.2.3"
+    prop-types "^15.5.8"
+    react-transition-group "^2.3.1"
 
-"@bit/react-bootstrap.react-bootstrap.close-button@1.0.0":
-  version "1.0.0"
-  resolved "https://node.bit.dev/react-bootstrap.react-bootstrap.close-button/-/react-bootstrap.react-bootstrap.close-button-1.0.0.tgz#0a73bfc6739f2dae535d98fe4f142a527e0944bf"
-  integrity sha1-CnO/xnOfLa5TXZj+TxQqUn4JRL8=
+"@bit/reactstrap.reactstrap.internal.modal-body@^7.1.0":
+  version "7.1.0"
+  resolved "https://node.bit.dev/reactstrap.reactstrap.internal.modal-body/-/reactstrap.reactstrap.internal.modal-body-7.1.0.tgz#da1a29cbbfb73fbde5c58d383c054b9ebc46b225"
+  integrity sha1-2hopy7+3P73lxY04PAVLnrxGsiU=
   dependencies:
-    prop-types "^15.6.2"
+    "@bit/reactstrap.reactstrap.internal.utils" "7.1.0"
+    classnames "^2.2.3"
+    prop-types "^15.5.8"
 
-"@bit/react-bootstrap.react-bootstrap.create-chained-function@1.0.0":
-  version "1.0.0"
-  resolved "https://node.bit.dev/react-bootstrap.react-bootstrap.create-chained-function/-/react-bootstrap.react-bootstrap.create-chained-function-1.0.0.tgz#9323b0b32bb9e37bd805f8fb2f0e2ae42bee8ee9"
-  integrity sha1-kyOwsyu543vYBfj7Lw4q5Cvujuk=
-
-"@bit/react-bootstrap.react-bootstrap.div-with-class-name@1.0.0":
-  version "1.0.0"
-  resolved "https://node.bit.dev/react-bootstrap.react-bootstrap.div-with-class-name/-/react-bootstrap.react-bootstrap.div-with-class-name-1.0.0.tgz#2b0f482472ac24aaddbd388a4e274ed106aad208"
-  integrity sha1-Kw9IJHKsJKrdvTiKTidO0Qaq0gg=
+"@bit/reactstrap.reactstrap.internal.modal-footer@^7.1.0":
+  version "7.1.0"
+  resolved "https://node.bit.dev/reactstrap.reactstrap.internal.modal-footer/-/reactstrap.reactstrap.internal.modal-footer-7.1.0.tgz#5a8d95a613fd100c6597a19e050d965dab4195bf"
+  integrity sha1-Wo2VphP9EAxll6GeBQ2WXatBlb8=
   dependencies:
-    classnames "^2.2.6"
+    "@bit/reactstrap.reactstrap.internal.utils" "7.1.0"
+    classnames "^2.2.3"
+    prop-types "^15.5.8"
 
-"@bit/react-bootstrap.react-bootstrap.fade@1.0.0":
-  version "1.0.0"
-  resolved "https://node.bit.dev/react-bootstrap.react-bootstrap.fade/-/react-bootstrap.react-bootstrap.fade-1.0.0.tgz#0ce38eba6ebb93913665adb65b65a4d99915c328"
-  integrity sha1-DOOOum67k5E2Za22W2Wk2ZkVwyg=
+"@bit/reactstrap.reactstrap.internal.modal-header@^7.1.0":
+  version "7.1.0"
+  resolved "https://node.bit.dev/reactstrap.reactstrap.internal.modal-header/-/reactstrap.reactstrap.internal.modal-header-7.1.0.tgz#7f05862f70367fcd14c65c4ff80ab6d08ab0fe10"
+  integrity sha1-fwWGL3A2f80UxlxP+Aq20Iqw/hA=
   dependencies:
-    "@bit/react-bootstrap.react-bootstrap.trigger-browser-reflow" "1.0.0"
-    classnames "^2.2.6"
-    dom-helpers "^3.4.0"
-    prop-types "^15.6.2"
-    react-transition-group "^2.5.1"
+    "@bit/reactstrap.reactstrap.internal.utils" "7.1.0"
+    classnames "^2.2.3"
+    prop-types "^15.5.8"
 
-"@bit/react-bootstrap.react-bootstrap.modal-body@1.0.0":
-  version "1.0.0"
-  resolved "https://node.bit.dev/react-bootstrap.react-bootstrap.modal-body/-/react-bootstrap.react-bootstrap.modal-body-1.0.0.tgz#a4b5cb8fb7dff3473bbd842f90a9a4b66bf5b6ee"
-  integrity sha1-pLXLj7ff80c7vYQvkKmktmv1tu4=
+"@bit/reactstrap.reactstrap.internal.utils@7.1.0":
+  version "7.1.0"
+  resolved "https://node.bit.dev/reactstrap.reactstrap.internal.utils/-/reactstrap.reactstrap.internal.utils-7.1.0.tgz#c72dd503899faa5ca445a60c9e8a6c31381ff1c1"
+  integrity sha1-xy3VA4mfqlykRaYMnopsMTgf8cE=
   dependencies:
-    "@bit/react-bootstrap.react-bootstrap.theme-provider" "1.0.0"
-    classnames "^2.2.6"
-    prop-types "^15.6.2"
-    prop-types-extra "^1.1.0"
+    lodash.isfunction "^3.0.9"
+    prop-types "^15.5.8"
 
-"@bit/react-bootstrap.react-bootstrap.modal-context@1.0.0":
-  version "1.0.0"
-  resolved "https://node.bit.dev/react-bootstrap.react-bootstrap.modal-context/-/react-bootstrap.react-bootstrap.modal-context-1.0.0.tgz#3cae3e4b7c8836ed9d2704319653bcc623b59bd4"
-  integrity sha1-PK4+S3yINu2dJwQxllO8xiO1m9Q=
-
-"@bit/react-bootstrap.react-bootstrap.modal-dialog@1.0.0":
-  version "1.0.0"
-  resolved "https://node.bit.dev/react-bootstrap.react-bootstrap.modal-dialog/-/react-bootstrap.react-bootstrap.modal-dialog-1.0.0.tgz#dec372e7a6aa35f91cf7b5857268f1d26c27c5af"
-  integrity sha1-3sNy56aqNfkc97WFcmjx0mwnxa8=
+"@bit/reactstrap.reactstrap.internal.utils@8.4.1":
+  version "8.4.1"
+  resolved "https://node.bit.dev/reactstrap.reactstrap.internal.utils/-/reactstrap.reactstrap.internal.utils-8.4.1.tgz#a297373e1578bcca5b77092d8d1e951dfb9ec3ef"
+  integrity sha1-opc3PhV4vMpbdwktjR6VHfuew+8=
   dependencies:
-    "@bit/react-bootstrap.react-bootstrap.theme-provider" "1.0.0"
-    classnames "^2.2.6"
-    prop-types "^15.6.2"
+    prop-types "^15.5.8"
 
-"@bit/react-bootstrap.react-bootstrap.modal-footer@1.0.0":
-  version "1.0.0"
-  resolved "https://node.bit.dev/react-bootstrap.react-bootstrap.modal-footer/-/react-bootstrap.react-bootstrap.modal-footer-1.0.0.tgz#7425e995c14d9cc256174f9b00b5af12e397c7c0"
-  integrity sha1-dCXplcFNnMJWF0+bALWvEuOXx8A=
+"@bit/reactstrap.reactstrap.modal@^8.4.1":
+  version "8.4.1"
+  resolved "https://node.bit.dev/reactstrap.reactstrap.modal/-/reactstrap.reactstrap.modal-8.4.1.tgz#a0efae70cfdc9acc2c063c9f843459abd5b77a75"
+  integrity sha1-oO+ucM/cmswsBjyfhDRZq9W3enU=
   dependencies:
-    "@bit/react-bootstrap.react-bootstrap.theme-provider" "1.0.0"
-    classnames "^2.2.6"
-    prop-types "^15.6.2"
-    prop-types-extra "^1.1.0"
+    "@bit/reactstrap.reactstrap.fade" "8.4.1"
+    "@bit/reactstrap.reactstrap.internal.utils" "8.4.1"
+    "@bit/reactstrap.reactstrap.portal" "8.4.1"
+    classnames "^2.2.3"
+    prop-types "^15.5.8"
 
-"@bit/react-bootstrap.react-bootstrap.modal-header@1.0.0":
-  version "1.0.0"
-  resolved "https://node.bit.dev/react-bootstrap.react-bootstrap.modal-header/-/react-bootstrap.react-bootstrap.modal-header-1.0.0.tgz#f4d86ba8eff660f45fc21fc92e57bf83eed082f5"
-  integrity sha1-9NhrqO/2YPRfwh/JLle/g+7QgvU=
+"@bit/reactstrap.reactstrap.portal@8.4.1":
+  version "8.4.1"
+  resolved "https://node.bit.dev/reactstrap.reactstrap.portal/-/reactstrap.reactstrap.portal-8.4.1.tgz#61b3c8bf4fc164d14cc8dd7b8878028b524faa44"
+  integrity sha1-YbPIv0/BZNFMyN17iHgCi1JPqkQ=
   dependencies:
-    "@bit/react-bootstrap.react-bootstrap.close-button" "1.0.0"
-    "@bit/react-bootstrap.react-bootstrap.create-chained-function" "1.0.0"
-    "@bit/react-bootstrap.react-bootstrap.modal-context" "1.0.0"
-    "@bit/react-bootstrap.react-bootstrap.theme-provider" "1.0.0"
-    classnames "^2.2.6"
-    prop-types "^15.6.2"
-
-"@bit/react-bootstrap.react-bootstrap.modal-title@1.0.0":
-  version "1.0.0"
-  resolved "https://node.bit.dev/react-bootstrap.react-bootstrap.modal-title/-/react-bootstrap.react-bootstrap.modal-title-1.0.0.tgz#8b59f7cd3adf8af4aecc77e4db70f0fc54917a0f"
-  integrity sha1-i1n3zTrfivSuzHfk23Dw/FSReg8=
-  dependencies:
-    "@bit/react-bootstrap.react-bootstrap.div-with-class-name" "1.0.0"
-    "@bit/react-bootstrap.react-bootstrap.theme-provider" "1.0.0"
-    classnames "^2.2.6"
-    prop-types "^15.6.2"
-    prop-types-extra "^1.1.0"
-
-"@bit/react-bootstrap.react-bootstrap.modal@^1.0.0":
-  version "1.0.0"
-  resolved "https://node.bit.dev/react-bootstrap.react-bootstrap.modal/-/react-bootstrap.react-bootstrap.modal-1.0.0.tgz#e79875ea7147c354c780f52f727758077bd4c173"
-  integrity sha1-55h16nFHw1THgPUvcndYB3vUwXM=
-  dependencies:
-    "@bit/react-bootstrap.react-bootstrap.bootstrap-modal-manager" "1.0.0"
-    "@bit/react-bootstrap.react-bootstrap.fade" "1.0.0"
-    "@bit/react-bootstrap.react-bootstrap.modal-body" "1.0.0"
-    "@bit/react-bootstrap.react-bootstrap.modal-context" "1.0.0"
-    "@bit/react-bootstrap.react-bootstrap.modal-dialog" "1.0.0"
-    "@bit/react-bootstrap.react-bootstrap.modal-footer" "1.0.0"
-    "@bit/react-bootstrap.react-bootstrap.modal-header" "1.0.0"
-    "@bit/react-bootstrap.react-bootstrap.modal-title" "1.0.0"
-    "@bit/react-bootstrap.react-bootstrap.theme-provider" "1.0.0"
-    classnames "^2.2.6"
-    dom-helpers "^3.4.0"
-    prop-types "^15.6.2"
-    prop-types-extra "^1.1.0"
-    react-overlays "^1.0.0"
-
-"@bit/react-bootstrap.react-bootstrap.theme-provider@1.0.0":
-  version "1.0.0"
-  resolved "https://node.bit.dev/react-bootstrap.react-bootstrap.theme-provider/-/react-bootstrap.react-bootstrap.theme-provider-1.0.0.tgz#2efb9e8785b98187790014117bb8fc3d8086cb77"
-  integrity sha1-Lvueh4W5gYd5ABQRe7j8PYCGy3c=
-  dependencies:
-    prop-types "^15.6.2"
-    react-context-toolbox "^2.0.2"
-
-"@bit/react-bootstrap.react-bootstrap.trigger-browser-reflow@1.0.0":
-  version "1.0.0"
-  resolved "https://node.bit.dev/react-bootstrap.react-bootstrap.trigger-browser-reflow/-/react-bootstrap.react-bootstrap.trigger-browser-reflow-1.0.0.tgz#a73e965696b2a53fcc022438db97914a3d43719c"
-  integrity sha1-pz6WVpaypT/MAiQ425eRSj1DcZw=
+    "@bit/reactstrap.reactstrap.internal.utils" "8.4.1"
+    prop-types "^15.5.8"
 
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
@@ -3048,7 +2991,7 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@^2.2.6:
+classnames@^2.2.3:
   version "2.2.6"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
   integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
@@ -3398,14 +3341,6 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-create-react-context@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/create-react-context/-/create-react-context-0.3.0.tgz#546dede9dc422def0d3fc2fe03afe0bc0f4f7d8c"
-  integrity sha512-dNldIoSuNSvlTJ7slIKC/ZFGKexBMBrrcc+TTe1NdmROnaASuLPvqpwj9v4XS4uXZ8+YPu0sNmShX2rXI5LNsw==
-  dependencies:
-    gud "^1.0.0"
-    warning "^4.0.3"
-
 cross-spawn@7.0.1:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-7.0.1.tgz#0ab56286e0f7c24e153d04cc2aa027e43a9a5d14"
@@ -3726,7 +3661,7 @@ decode-uri-component@^0.2.0:
   resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
   integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
 
-deep-equal@^1.0.1, deep-equal@^1.1.1:
+deep-equal@^1.0.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/deep-equal/-/deep-equal-1.1.1.tgz#b5c98c942ceffaf7cb051e24e1434a25a2e6076a"
   integrity sha512-yd9c5AdiqVcR+JjcwUQb9DkhJc8ngNr0MahEBGvDiJw8puWab2yZlh+nkasOnZP+EGTAP6rRp2JzJhJZzvNF8g==
@@ -5050,11 +4985,6 @@ growly@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/growly/-/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
   integrity sha1-8QdIy+dq+WS3yWyTxrzCivEgwIE=
-
-gud@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/gud/-/gud-1.0.0.tgz#a489581b17e6a70beca9abe3ae57de7a499852c0"
-  integrity sha512-zGEOVKFM5sVPPrYs7J5/hYEw2Pof8KCyOwyhG8sAF26mCAeUFAcYPu1mwB7hhpIP29zOIBaDqwuHdLp0jvZXjw==
 
 gzip-size@5.1.1:
   version "5.1.1"
@@ -6678,6 +6608,11 @@ lodash._reinterpolate@^3.0.0:
   resolved "https://registry.yarnpkg.com/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz#0ccf2d89166af03b3663c796538b75ac6e114d9d"
   integrity sha1-DM8tiRZq8Ds2Y8eWU4t1rG4RTZ0=
 
+lodash.isfunction@^3.0.9:
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/lodash.isfunction/-/lodash.isfunction-3.0.9.tgz#06de25df4db327ac931981d1bdb067e5af68d051"
+  integrity sha512-AirXNj15uRIMMPihnkInB4i3NHeb4iBtNg9WRWuK2o31S+ePwwNmDPaTL3o7dTJ+VXNZim7rFs4rxN4YU1oUJw==
+
 lodash.memoize@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
@@ -7821,11 +7756,6 @@ pnp-webpack-plugin@1.6.4:
   dependencies:
     ts-pnp "^1.1.6"
 
-popper.js@^1.14.4:
-  version "1.16.1"
-  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.16.1.tgz#2a223cb3dc7b6213d740e40372be40de43e65b1b"
-  integrity sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==
-
 portfinder@^1.0.26:
   version "1.0.28"
   resolved "https://registry.yarnpkg.com/portfinder/-/portfinder-1.0.28.tgz#67c4622852bd5374dd1dd900f779f53462fac778"
@@ -8594,15 +8524,7 @@ prompts@^2.0.1:
     kleur "^3.0.3"
     sisteransi "^1.0.4"
 
-prop-types-extra@^1.1.0:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/prop-types-extra/-/prop-types-extra-1.1.1.tgz#58c3b74cbfbb95d304625975aa2f0848329a010b"
-  integrity sha512-59+AHNnHYCdiC+vMwY52WmvP5dM3QLeoumYuEyceQDi9aEhtwN9zIQ2ZNo25sMyXnbh32h+P1ezDsUpUH3JAew==
-  dependencies:
-    react-is "^16.3.2"
-    warning "^4.0.0"
-
-prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.8, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -8768,11 +8690,6 @@ react-app-polyfill@^1.0.6:
     regenerator-runtime "^0.13.3"
     whatwg-fetch "^3.0.0"
 
-react-context-toolbox@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/react-context-toolbox/-/react-context-toolbox-2.0.2.tgz#35637287cb23f801e6ed802c2bb7a97e1f04e3fb"
-  integrity sha512-tY4j0imkYC3n5ZlYSgFkaw7fmlCp3IoQQ6DxpqeNHzcD0hf+6V+/HeJxviLUZ1Rv1Yn3N3xyO2EhkkZwHn0m1A==
-
 react-dev-utils@^10.2.1:
   version "10.2.1"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-10.2.1.tgz#f6de325ae25fa4d546d09df4bb1befdc6dd19c19"
@@ -8825,7 +8742,7 @@ react-icons@^3.11.0:
   dependencies:
     camelcase "^5.0.0"
 
-react-is@^16.12.0, react-is@^16.3.2, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4:
+react-is@^16.12.0, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
@@ -8834,33 +8751,6 @@ react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
-
-react-overlays@^1.0.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/react-overlays/-/react-overlays-1.2.0.tgz#205368eeb0a5fb0b7f9b717fa7a12d518500abdb"
-  integrity sha512-i/FCV8wR6aRaI+Kz/dpJhOdyx+ah2tN1RhT9InPrexyC4uzf3N4bNayFTGtUeQVacj57j1Mqh1CwV60/5153Iw==
-  dependencies:
-    classnames "^2.2.6"
-    dom-helpers "^3.4.0"
-    prop-types "^15.6.2"
-    prop-types-extra "^1.1.0"
-    react-context-toolbox "^2.0.2"
-    react-popper "^1.3.2"
-    uncontrollable "^6.0.0"
-    warning "^4.0.2"
-
-react-popper@^1.3.2:
-  version "1.3.7"
-  resolved "https://registry.yarnpkg.com/react-popper/-/react-popper-1.3.7.tgz#f6a3471362ef1f0d10a4963673789de1baca2324"
-  integrity sha512-nmqYTx7QVjCm3WUZLeuOomna138R1luC4EqkW3hxJUrAe+3eNz3oFCLYdnPwILfn0mX1Ew2c3wctrjlUMYYUww==
-  dependencies:
-    "@babel/runtime" "^7.1.2"
-    create-react-context "^0.3.0"
-    deep-equal "^1.1.1"
-    popper.js "^1.14.4"
-    prop-types "^15.6.1"
-    typed-styles "^0.0.7"
-    warning "^4.0.2"
 
 react-router-dom@^5.2.0:
   version "5.2.0"
@@ -8951,7 +8841,7 @@ react-scripts@3.4.3:
   optionalDependencies:
     fsevents "2.1.2"
 
-react-transition-group@^2.5.1:
+react-transition-group@^2.3.1:
   version "2.9.0"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-2.9.0.tgz#df9cdb025796211151a436c69a8f3b97b5b07c8d"
   integrity sha512-+HzNTCHpeQyl4MJ/bdE0u6XRMe9+XG/+aL4mCxVN4DnPBQ0/5bfHWPDuOZUzYdMj94daZaZdCCc1Dzt9R/xSSg==
@@ -10440,23 +10330,10 @@ type@^2.0.0:
   resolved "https://registry.yarnpkg.com/type/-/type-2.0.0.tgz#5f16ff6ef2eb44f260494dae271033b29c09a9c3"
   integrity sha512-KBt58xCHry4Cejnc2ISQAF7QY+ORngsWfxezO68+12hKV6lQY8P/psIkcbjeHWn7MqcgciWJyCCevFMJdIXpow==
 
-typed-styles@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/typed-styles/-/typed-styles-0.0.7.tgz#93392a008794c4595119ff62dde6809dbc40a3d9"
-  integrity sha512-pzP0PWoZUhsECYjABgCGQlRGL1n7tOHsgwYv3oIiEpJwGhFTuty/YNeduxQYzXXa3Ge5BdT6sHYIQYpl4uJ+5Q==
-
 typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
-
-uncontrollable@^6.0.0:
-  version "6.2.3"
-  resolved "https://registry.yarnpkg.com/uncontrollable/-/uncontrollable-6.2.3.tgz#e7dba0d746e075122ed178f27ad2354d343196c7"
-  integrity sha512-VgOAoBU2ptCL2bfTG2Mra0I8i1u6Aq84AFonD5tmCAYSfs3hWvr2Rlw0q2ntoxXTHjcQOmZOh3FKaN+UZVyREQ==
-  dependencies:
-    "@babel/runtime" "^7.4.5"
-    invariant "^2.2.4"
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
@@ -10706,13 +10583,6 @@ walker@^1.0.7, walker@~1.0.5:
   integrity sha1-L3+bj9ENZ3JisYqITijRlhjgKPs=
   dependencies:
     makeerror "1.0.x"
-
-warning@^4.0.0, warning@^4.0.2, warning@^4.0.3:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/warning/-/warning-4.0.3.tgz#16e9e077eb8a86d6af7d64aa1e05fd85b4678ca3"
-  integrity sha512-rpJyN222KWIvHJ/F53XSZv0Zl/accqHR8et1kpaMTD/fLCRxtV8iX8czMzY7sVZupTI3zcUTg8eycS2kNF9l6w==
-  dependencies:
-    loose-envify "^1.0.0"
 
 watchpack@^1.6.0:
   version "1.6.0"
