@@ -6,9 +6,12 @@ import api from '../../services/api'; // api
 
 import {FiX, FiPlus, FiSearch} from 'react-icons/fi'; // icon x e +
 
+import Modal from '@bit/react-bootstrap.react-bootstrap.modal' // modal biblioteca
+
 const Inicial = () => {
     const [query, setQuery] = useState(''); // query / pesquisa
     const [dados, setDados] = useState([]); // dados da lista
+    const [estado, setEstado] = useState(false); // estado da form
 
     // obter dados no inicio
     useEffect(() => {
@@ -30,6 +33,14 @@ const Inicial = () => {
         } catch (error) {
             alert('Error, tente novamente! :)');
         }
+    }
+
+    function abrirForm(form){
+
+    }
+
+    function fecharForm(form){
+
     }
 
     return (
@@ -63,7 +74,7 @@ const Inicial = () => {
             </label>
           </div>
           <div className="second">
-            <button className="b">
+            <button className="b" onClick={abrirForm}>
               <FiPlus />
               Add
             </button>
@@ -91,6 +102,21 @@ const Inicial = () => {
             </li>
           ))}
         </ul>
+
+        <Modal show={this.state.show} onHide={this.handleClose}>
+					<Modal.Header closeButton>
+						<Modal.Title>Modal heading</Modal.Title>
+					</Modal.Header>
+					<Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+					<Modal.Footer>
+						<button onClick={fecharForm}>
+							Close
+            </button>
+						<button onClick={fecharForm}>
+							Save Changes
+            </button>
+					</Modal.Footer>
+				</Modal>
       </div>
     );
 };
