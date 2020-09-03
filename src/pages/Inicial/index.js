@@ -12,6 +12,8 @@ import converterParaArray from '../../utils/converterStringParaArray'; // String
 const Inicial = () => {
     // query / pesquisa
     const [query, setQuery] = useState('');
+    //precisa recarregar a pagina
+    const [reload, setReload] = useState(false);
     // dados da lista
     const [dados, setDados] = useState([]);
     // estado da form para nova ferramenta
@@ -35,11 +37,12 @@ const Inicial = () => {
         try {
              api.get("/tools").then((response) => {
                setDados(response.data);
+               setReload(false);
              });
         } catch (error) {
             alert('Aconteceu um erro estranho, Por favor Recarregue a pagina :X');
         }
-    }, []);
+    }, [reload]);
     
     // funcao para remover item quando clicar no butao remover
     function removerItem(item){
@@ -70,12 +73,20 @@ const Inicial = () => {
             token:token
           }
         }).then((response) => {
-          console.log(response);
-          //setDados(response.data);
+          alert("Adicionado com sucesso a nova ferramenta! :)");
+          setReload(true);
+          //setDados(...dados, response.data);
         });
       } catch (error) {
+        console.log(error); // para debugging
         alert('Error, Tente Novamente! :(');
       }
+    }
+
+    //funcao para pesquisar por um item
+    async function searchItem(e){
+      e.preventDefault();
+
     }
 
     // apresentar o modal
@@ -83,9 +94,10 @@ const Inicial = () => {
       if(tipo === 1){
         setShow(true);
       } else if (tipo === 2){
-      setRemover(true);
+        setRemover(true);
       }
     };
+
     // guardar/esconder o modal
     function hideModal (tipo, e) {
       if(tipo === 1){
@@ -111,7 +123,7 @@ const Inicial = () => {
 
         <div className="tools">
           <div className="first">
-            <>
+            <form onSubmit={e => searchItem(e)}>
               <FiSearch />
               <input
                 type="search"
@@ -119,21 +131,20 @@ const Inicial = () => {
                 id="search"
                 placeholder="Search"
               />
-            </>
-
-            <label>
-              <input
-                type="checkbox"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                name="tags"
-                id="tags"
-              />
-              search in tags only
-            </label>
+              <label>
+                <input
+                  type="checkbox"
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  name="tags"
+                  id="tags"
+                />
+                search in tags only
+              </label>
+            </form>
           </div>
           <div className="second">
-            <button className="b" onClick={e => showModal(1)}>
+            <button className="b" onClick={(e) => showModal(1)}>
               <FiPlus />
               Add
             </button>
@@ -164,41 +175,71 @@ const Inicial = () => {
         </ul>
 
         <Modal show={remover} handleClose={hideModal} tipo="modal-main-remove">
-        <div className="title-modal">
-          <FiX color="#e02041"/>
-          <h3>Remove Tool</h3>
-        </div>
-        <div className="text">
-          <p>Are You Sure You Want to Remove</p>
-        </div>
-        <div className="butoes">
-          <button onClick={e => hideModal(3)}>Cancel</button>
-          <button onClick={e => hideModal(4)}>Yes, Remove</button>
-        </div>
+          <div className="title-modal">
+            <FiX color="#e02041" />
+            <h3>Remove Tool</h3>
+          </div>
+          <div className="text">
+            <p>Are You Sure You Want to Remove</p>
+          </div>
+          <div className="butoes">
+            <button onClick={(e) => hideModal(3)}>Cancel</button>
+            <button onClick={(e) => hideModal(4)}>Yes, Remove</button>
+          </div>
         </Modal>
 
         <Modal show={show} handleClose={hideModal} tipo="modal-main">
           <div className="title-modal">
-            <FiPlus color="#e02041"/>
+            <FiPlus color="#e02041" />
             <h3>Add new tool</h3>
           </div>
 
-          <form className="form-modal" onSubmit={e => hideModal(1)}>
+          <form className="form-modal" onSubmit={(e) => hideModal(1)}>
             <label htmlFor="title">Tool Name</label>
-            <input type="text" value={title} onChange={e => setTitle(e.target.value)} name="title" id="title" placeholder="Titulo da Ferramenta"/>
+            <input
+              type="text"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              name="title"
+              id="title"
+              placeholder="Titulo da Ferramenta"
+            />
 
             <label htmlFor="link">Tool Link</label>
-            <input type="text" value={link} onChange={e => setLink(e.target.value)} name="link" id="link" placeholder="Endereço da Ferramenta"/>
+            <input
+              type="text"
+              value={link}
+              onChange={(e) => setLink(e.target.value)}
+              name="link"
+              id="link"
+              placeholder="Endereço da Ferramenta"
+            />
 
             <label htmlFor="description">Tool description</label>
-            <input type="text" value={description} onChange={e => setDescription(e.target.value)} name="description" id="description" placeholder="Descrição da Ferramenta"/>
+            <input
+              type="text"
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+              name="description"
+              id="description"
+              placeholder="Descrição da Ferramenta"
+            />
 
             <label htmlFor="tags">Tags</label>
-            <input type="text" value={tags} onChange={e => setTags(e.target.value)} name="tags" id="tags" placeholder="Tags para a Ferramenta"/>
+            <input
+              type="text"
+              value={tags}
+              onChange={(e) => setTags(e.target.value)}
+              name="tags"
+              id="tags"
+              placeholder="Tags para a Ferramenta"
+            />
           </form>
 
           <div className="butoes">
-            <button type="submit" onClick={e => hideModal(2, e)}>Add Tool</button>
+            <button type="submit" onClick={(e) => hideModal(2, e)}>
+              Add Tool
+            </button>
           </div>
         </Modal>
       </div>
