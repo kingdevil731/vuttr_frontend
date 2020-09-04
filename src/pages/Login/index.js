@@ -16,18 +16,26 @@ const Login = () => {
     const local = localStorage.getItem("_id");
 
     useEffect(() => {
-      if(local !== undefined || local.length === 24){
+      console.log(local);
+      if(local != undefined || local != null){
         history.push('/main');
       }
     }, [history, local]);
 
     async function iniciarSeccao(e){
         e.preventDefault();
-        try {
-            const response = await api.post("/auth/login", {
-              id : id
-            });
 
+        const data = {
+          id:id
+        }
+
+        try {
+          await api.get("auth/login", data ,{
+            headers: {
+              "Content-Type": "application/json" 
+            }
+          }).then((response) => {
+            console.log(response);
             const {token, usuario} = response.body;
             
             // colocar o token e usuario no local storage do computador/usuario
@@ -35,7 +43,9 @@ const Login = () => {
             localStorage.setItem("usuario", usuario);
 
             //ir para a pagina incial sendo que o usuario ja iniciou a seccao
-            history.push('/main');
+            history.push('/main');    
+          });  
+              
         } catch (error) {
             console.log(error);
             alert('Error, tente novamente');  
