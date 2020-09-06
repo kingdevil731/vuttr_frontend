@@ -10,8 +10,25 @@ div.main div.title {
     margin: 3px;
     margin-bottom: 20px;
 }
+
 div.main div.title h1 {
     margin-bottom: 8px;
+}
+
+div.search-box {
+    display: inline;
+    background-color: white;
+    padding: 4px;
+    margin: 3px;
+    margin: 3px;
+    border-radius: 4px;
+    border: 0;
+}
+div.search-box .search-icon {
+    vertical-align: middle;
+}
+div.search-box input {
+    background-color: transparent;
 }
 
 div.tools {
@@ -21,6 +38,7 @@ div.tools {
 }
 div.tools div.first input {
     padding: 4px;
+    margin: 3px;
     margin: 3px;
     border-radius: 4px;
     border: 0;

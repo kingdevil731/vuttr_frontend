@@ -30,13 +30,13 @@ const Login = () => {
         }
 
         try {
-          await api.get("auth/login", data ,{
+          await api.post("auth/login", data ,{
             headers: {
               "Content-Type": "application/json" 
             }
           }).then((response) => {
             console.log(response);
-            const {token, usuario} = response.body;
+            const {token, usuario} = response.data;
             
             // colocar o token e usuario no local storage do computador/usuario
             localStorage.setItem("token", token);

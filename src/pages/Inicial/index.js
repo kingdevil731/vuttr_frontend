@@ -12,6 +12,8 @@ import converterParaArray from '../../utils/converterStringParaArray'; // String
 const Inicial = () => {
     // query / pesquisa
     const [query, setQuery] = useState('');
+     // query checkbox / pesquisa
+    const [check, setCheck] = useState(false);
     //precisa recarregar a pagina
     const [reload, setReload] = useState(false);
     // dados da lista
@@ -22,9 +24,9 @@ const Inicial = () => {
     const [remover, setRemover] = useState(false);
     // id para remover
     const [id, setId] = useState('');
-    // usuario
+    // usuario gravado no storage do computador
     const usuario = localStorage.getItem('usuario');
-    // token
+    // token gravado no storage do computador
     const token = localStorage.getItem('token');
     // dados no cadastro
     const [title, setTitle] = useState('');
@@ -64,8 +66,6 @@ const Inicial = () => {
         tags: converterParaArray(tags)
       }
 
-      console.log("data", data, "headers", usuario, token);
-
       try {
         await api.post("/tools", data ,{
           headers: {
@@ -86,7 +86,25 @@ const Inicial = () => {
     //funcao para pesquisar por um item
     async function searchItem(e){
       e.preventDefault();
-
+      if(query.length === 0){
+        try {
+          api.get("/tools").then((response) => {
+            setDados(response.data);
+          });
+        } catch (error) {
+          alert('Aconteceu um erro estranho, Por favor Recarregue a pagina :X');
+        }
+      } else {
+        if(!check){
+          await api.get(`/tools/all?all=${query}`).then((response) => {
+            setDados(response.data);
+        });
+      } else {
+        await api.get(`/tool?tag=${query}`).then((response) => {
+          setDados(response.data);
+        });
+      }
+    }
     }
 
     // apresentar o modal
@@ -124,23 +142,26 @@ const Inicial = () => {
         <div className="tools">
           <div className="first">
             <form onSubmit={e => searchItem(e)}>
-              <FiSearch />
+              <div className="search-box">
+              <FiSearch className="search-icon" color="#e02041"/>
               <input
                 type="search"
                 name="search"
                 id="search"
+                value={query}
                 placeholder="Search"
+                onChange={e => setQuery(e.target.value)}
               />
-              <label>
+              </div>
+              <label htmlFor="tags">  
                 <input
                   type="checkbox"
-                  value={query}
-                  onChange={(e) => setQuery(e.target.value)}
+                  value={check}
+                  onChange={e => setCheck(e.target.checked)}
                   name="tags"
                   id="tags"
                 />
-                search in tags only
-              </label>
+               search in tags only </label>
             </form>
           </div>
           <div className="second">
