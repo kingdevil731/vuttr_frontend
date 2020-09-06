@@ -1,3 +1,18 @@
+## Vuttr App frontEnd
+
+### Descrição
+  Este aplicativo usando a backend criada por nós, ele nos apresenta ferramentas muito uteis de se lembrar.
+  
+  Logo que inicamos a aplicação somos apresentados com a tela inicial onde temos a possibilidade de fazer inicio de sessão ou cadastrar.
+  apos iniciar sessão ou cadastar iremos ter a tela para termos acesso ao conteudo.
+  
+
+  *nele temos a opção e cadastrar e login do usuario.
+  *temos a parte inical da aplicação, onde temos opção de filtrar o conteudo de forma geral e tambem somente atráves da tag.
+  *temos opção de adicionar ferramenta.
+  *temos opção de remover.
+
+
 
 ## Available Scripts
 
