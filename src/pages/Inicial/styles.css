@@ -19,8 +19,8 @@ div.search-box {
     display: inline;
     background-color: white;
     padding: 4px;
-    margin: 3px;
-    margin: 3px;
+    margin-left: 3px;
+    margin-right: 3px;
     border-radius: 4px;
     border: 0;
 }
