@@ -21,3 +21,6 @@ body {
     background-color: #e02041;
     border-radius: 8px;
 }
+.button-log:hover {
+       background-color: #ff002c;
+}
