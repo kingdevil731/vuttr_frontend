@@ -1,7 +1,7 @@
-import axios from 'axios';
+import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://vuttr-back-end.herokuapp.com",
+  baseURL: "https://vuttrbackend0.herokuapp.com",
 });
 
 export default api;
